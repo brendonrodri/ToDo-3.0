@@ -1,7 +1,7 @@
-import React, { useState } from "react"
+import React, {  useEffect, useState } from "react"
 import "./style.css"
 export default function App (){
-  const [task, setTask] = useState([]);
+  const [task, setTask] = useState(JSON.parse(localStorage.getItem('yourTasks')) || []);
   const [input, setInput] = useState()
   const addTask = () =>{
     if(!input){
@@ -26,6 +26,9 @@ export default function App (){
     let delTask = task.filter((item)=> item.id !== id)
     setTask(delTask)
   }
+  useEffect(()=>{
+    localStorage.setItem('yourTasks', JSON.stringify(task))
+  },[task])
   return(
     <form onSubmit={e=> e.preventDefault()}>
       <input onChange={e=>setInput(e.target.value)} value={input} />
