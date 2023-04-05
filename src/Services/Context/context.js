@@ -1,15 +1,9 @@
-import React, {createContext, useState} from "react"
-
+import React, {createContext, useState, useEffect} from "react"
 export const Context = createContext({})
-
 export default function ContextProvider ({children}){
-    const [inputData, setInputData] = useState()
-    const [taskList, setTaskList] = useState()
-
+    const [taskList, setTaskList] = useState(JSON.parse(localStorage.getItem('taskData')) || []);
     return(
         <Context.Provider value={{
-            inputData,
-            setInputData,
             taskList,
             setTaskList
         }}>

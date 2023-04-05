@@ -1,10 +1,12 @@
 import React, {  useEffect, useState } from "react"
 import FormComponent from "./Components/InputForm";
+import NewTasksComponent from "./Components/TasksComponent";
 import ContextProvider from "./Services/Context/context";
 import { GlobalStyle } from "./Services/GlobalStyle/GlobalStyle";
+import CreateLocalStorage from "./Services/LocalStorage/localStorage";
 import "./style.css"
 export default function App (){
-  const [task, setTask] = useState(JSON.parse(localStorage.getItem('yourTasks')) || []);
+  /* const [task, setTask] = useState(JSON.parse(localStorage.getItem('yourTasks')) || []);
   const [input, setInput] = useState()
   const addTask = () =>{
     if(!input){
@@ -28,31 +30,18 @@ export default function App (){
   const removeTask = (id)=>{
     let delTask = task.filter((item)=> item.id !== id)
     setTask(delTask)
-  }
-  useEffect(()=>{
+  } */
+  /* useEffect(()=>{
     localStorage.setItem('yourTasks', JSON.stringify(task))
-  },[task])
+  },[task]) */
   return(
     <>
-    <GlobalStyle />
-    <ContextProvider>
-      <FormComponent />
-      {/* <form onSubmit={e=> e.preventDefault()}>
-      <input onChange={e=>setInput(e.target.value)} value={input} />
-      <button onClick={()=>{
-        addTask()
-      }}> Add</button>
-      <ul>
-        {task.map((item)=>(
-          <>
-            <li>{item.nome}</li>
-            <input type="checkbox" onClick={()=>{ checked(item.id)}} />
-            <button onClick={()=>{removeTask(item.id)}}>Del</button>
-          </> 
-        ))}
-      </ul>
-    </form> */}
-    </ContextProvider>
+      <GlobalStyle />
+      <ContextProvider>
+        <CreateLocalStorage />
+        <FormComponent />
+        <NewTasksComponent />
+      </ContextProvider>
     </>
   )
 }

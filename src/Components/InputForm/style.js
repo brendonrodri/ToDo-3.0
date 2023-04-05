@@ -35,4 +35,7 @@ export const ButtonAdd = styled.button`
     cursor: pointer;
     border: none;
     background: transparent;
+    :hover{
+        transform: scale(1.1);
+    }
 `
