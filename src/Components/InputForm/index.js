@@ -1,4 +1,5 @@
 import React, { useContext } from "react"
+import * as S from './style'
 import { Context } from "../../Services/Context/context"
 export default function FormComponent(){
     const {inputData, setInputData} = useContext(Context)
@@ -6,11 +7,13 @@ export default function FormComponent(){
         setInputData(e.target.value)
     }
     return(
-        <form>
-            <input value={inputData} onChange={()=>{
-                addTask()
-            }}/>
-            <button> add </button>
-        </form>
+        <S.FormContainer>
+            <S.InputTask 
+                value={inputData} 
+                onChange={()=>{ addTask() }}
+                placeholder="Adicione aqui sua tarefa"
+            />
+            <S.ButtonAdd> add </S.ButtonAdd>
+        </S.FormContainer>
     )
 }
