@@ -1,4 +1,6 @@
 import React, {  useEffect, useState } from "react"
+import FormComponent from "./Components/InputForm";
+import ContextProvider from "./Services/Context/context";
 import "./style.css"
 export default function App (){
   const [task, setTask] = useState(JSON.parse(localStorage.getItem('yourTasks')) || []);
@@ -30,7 +32,9 @@ export default function App (){
     localStorage.setItem('yourTasks', JSON.stringify(task))
   },[task])
   return(
-    <form onSubmit={e=> e.preventDefault()}>
+    <ContextProvider>
+      <FormComponent />
+      {/* <form onSubmit={e=> e.preventDefault()}>
       <input onChange={e=>setInput(e.target.value)} value={input} />
       <button onClick={()=>{
         addTask()
@@ -44,6 +48,8 @@ export default function App (){
           </> 
         ))}
       </ul>
-    </form>
+    </form> */}
+    </ContextProvider>
+    
   )
 }
