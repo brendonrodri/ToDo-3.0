@@ -12,7 +12,7 @@ export default function FormComponent(){
     a função pega o que foi digitado no input e concatena na lista anterior, junto com uma Id gerada automaticamente pelo método Math
     */
     const addTask = ()=>{
-        if(inputData === ""){
+        if(!inputData){
             return
         }
         setTaskList(taskList.concat({
