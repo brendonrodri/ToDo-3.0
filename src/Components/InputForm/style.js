@@ -6,8 +6,24 @@ export const FormContainer = styled.form`
     align-items: center;
     justify-content: center;
     background-color: aliceblue;
+    margin: 0 auto;
 `
 export const InputTask = styled.input`
+    width: 15vw;
+    height: 4vh;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    :focus{
+        width: 20vw;
+        transition: ease-in 0.4s;
+    }
+    :placeholder-shown{
+        text-align: center;
+    }
+`
+export const InputTaskMax = styled.input`
     width: 15vw;
     height: 4vh;
     border-radius: 5px;
@@ -15,6 +31,8 @@ export const InputTask = styled.input`
 `
 export const ButtonAdd = styled.button`
     width: 3vw;
-    height: 5vh;
-    margin-left: 1rem;
+    height: 4vh;
+    cursor: pointer;
+    border: none;
+    background: transparent;
 `

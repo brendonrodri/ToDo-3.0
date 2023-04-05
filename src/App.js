@@ -1,6 +1,7 @@
 import React, {  useEffect, useState } from "react"
 import FormComponent from "./Components/InputForm";
 import ContextProvider from "./Services/Context/context";
+import { GlobalStyle } from "./Services/GlobalStyle/GlobalStyle";
 import "./style.css"
 export default function App (){
   const [task, setTask] = useState(JSON.parse(localStorage.getItem('yourTasks')) || []);
@@ -32,6 +33,8 @@ export default function App (){
     localStorage.setItem('yourTasks', JSON.stringify(task))
   },[task])
   return(
+    <>
+    <GlobalStyle />
     <ContextProvider>
       <FormComponent />
       {/* <form onSubmit={e=> e.preventDefault()}>
@@ -50,6 +53,6 @@ export default function App (){
       </ul>
     </form> */}
     </ContextProvider>
-    
+    </>
   )
 }
