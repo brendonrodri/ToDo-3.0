@@ -17,7 +17,8 @@ export default function FormComponent(){
         }
         setTaskList(taskList.concat({
             id: Math.random(),
-            task: inputData
+            task: inputData,
+            done: false
         }))
         setInputData("")
     }

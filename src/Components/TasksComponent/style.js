@@ -31,9 +31,8 @@ export const ButtonsContainer = styled.div`
     display: flex;
     justify-content: flex-end;
 `
-export const DelButton = styled.button`
+export const CardButton = styled.button`
     background: none;
-    width: 5vw;
     float: right;
     border: none;
     cursor: pointer;
