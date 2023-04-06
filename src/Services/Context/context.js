@@ -1,4 +1,4 @@
-import React, {createContext, useState, useEffect} from "react"
+import React, {createContext, useState} from "react"
 export const Context = createContext({})
 export default function ContextProvider ({children}){
     const [taskList, setTaskList] = useState(JSON.parse(localStorage.getItem('taskData')) || []);

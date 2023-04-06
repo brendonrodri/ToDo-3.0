@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react" //importando o hooks necessários na construção do component
+import React, { useContext, useState } from "react" //importando o hooks necessários na construção do component
 import { Context } from "../../Services/Context/context" //importando contexto para ser usado no useContext
 import {MdPostAdd} from "react-icons/md" //icone importado da lib React Icons
 import { IconContext } from "react-icons"  //contexto dos ínicos, nos permite passar estilos via props diretamente ao ícone, via provider
