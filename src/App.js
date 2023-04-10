@@ -1,4 +1,5 @@
 import React from "react"
+import HeaderComponent from "./Components/HeaderComponent";
 import FormComponent from "./Components/InputForm";
 import NewTasksComponent from "./Components/TasksComponent";
 import ContextProvider from "./Services/Context/context";
@@ -11,6 +12,7 @@ export default function App (){
       <GlobalStyle />
       <ContextProvider>
         <CreateLocalStorage />
+        <HeaderComponent />
         <FormComponent />
         <NewTasksComponent />
       </ContextProvider>

@@ -32,7 +32,7 @@ export const InputTask = styled.input`
     @media (min-device-width: 375px) 
         and (max-device-width: 667px) { 
         width: 80%;
-        height: 5vh;
+        height: 4vh;
     }
 `
 export const InputTaskMax = styled.input`
@@ -49,5 +49,10 @@ export const ButtonAdd = styled.button`
     background: transparent;
     :hover{
         transform: scale(1.1);
+    }
+    @media (min-device-width: 375px) 
+    and (max-device-width: 667px) { 
+        position: relative;
+        bottom: 4px;
     }
 `
