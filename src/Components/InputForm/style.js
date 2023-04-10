@@ -5,8 +5,12 @@ export const FormContainer = styled.form`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: aliceblue;
+    background-color: #9E4784;
     margin: 0 auto;
+    @media (min-device-width: 375px) 
+        and (max-device-width: 667px) { 
+        width: 90%;
+    }
 `
 export const InputTask = styled.input`
     width: 15vw;
@@ -21,6 +25,11 @@ export const InputTask = styled.input`
     }
     :placeholder-shown{
         text-align: center;
+    }
+    @media (min-device-width: 375px) 
+        and (max-device-width: 667px) { 
+        width: 80%;
+        height: 5vh;
     }
 `
 export const InputTaskMax = styled.input`

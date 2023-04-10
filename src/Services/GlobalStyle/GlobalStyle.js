@@ -5,4 +5,13 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
     }
+    body{
+
+
+
+        @media (min-device-width: 375px) 
+        and (max-device-width: 667px) { 
+            background-color: #37306B;
+        }
+    }
 `
