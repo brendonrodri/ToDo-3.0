@@ -28,12 +28,12 @@ const ListCards = () =>{
                     <S.TaskItem>{item.task}</S.TaskItem>
                     <S.ButtonsContainer>
                         <S.CardButton onClick={()=>{ delTask(item.id)}}> 
-                            <IconContext.Provider value={{size: "1.3rem"}}>
+                            <IconContext.Provider value={{size: "2rem"}}>
                                 <FaTrashAlt />
                             </IconContext.Provider>    
                         </S.CardButton>
                         <S.CardButton onClick={()=>{doneTask(item.id)}}>
-                            <IconContext.Provider value={{color: item.done === true ? 'green' : 'black', size: "1.3rem"}}>
+                            <IconContext.Provider value={{color: item.done === true ? 'green' : 'black', size: "2rem"}}>
                                 <AiOutlineCheck />
                             </IconContext.Provider>
                         </S.CardButton>
