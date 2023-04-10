@@ -12,7 +12,7 @@ export const TasksContainer = styled.section`
     margin: 0 auto;
     @media (min-device-width: 375px) 
         and (max-device-width: 667px) { 
-        width: 90%;
+        width: 95%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -37,7 +37,7 @@ export const TaskCard = styled.div`
     @media (min-device-width: 375px) 
         and (max-device-width: 667px) { 
         width: 100%;
-        line-break: strict;
+        height: 40vh;
     }
 `
 export const ButtonsContainer = styled.div`

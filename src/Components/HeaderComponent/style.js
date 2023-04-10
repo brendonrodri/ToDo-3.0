@@ -6,10 +6,12 @@ export const Header = styled.header`
     margin: 10px auto;
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: #9E4784;
     @media (min-device-width: 375px) 
     and (max-device-width: 667px){
-        width: 90%;
+        width: 95%;
+        height: 16vh;
     }
 `
 export const HeaderTitle = styled.h1 `

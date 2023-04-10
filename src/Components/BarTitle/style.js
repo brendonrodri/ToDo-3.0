@@ -10,7 +10,7 @@ export const TitleBarContainer = styled.section`
     background-color: #9E4784;
     @media (min-device-width: 375px) 
         and (max-device-width: 667px) { 
-        width: 90%;
+        width: 95%;
     }
 `
 export const SectionTitle = styled.h2`

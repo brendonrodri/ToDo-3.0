@@ -9,7 +9,8 @@ export const FormContainer = styled.form`
     margin: 0 auto;
     @media (min-device-width: 375px) 
         and (max-device-width: 667px) { 
-        width: 90%;
+        width: 95%;
+        justify-content: space-around;
     }
 `
 export const InputTask = styled.input`
@@ -32,7 +33,7 @@ export const InputTask = styled.input`
     @media (min-device-width: 375px) 
         and (max-device-width: 667px) { 
         width: 80%;
-        height: 4vh;
+        height: 6vh;
     }
 `
 export const InputTaskMax = styled.input`
@@ -42,17 +43,12 @@ export const InputTaskMax = styled.input`
     font-size: 1rem;
 `
 export const ButtonAdd = styled.button`
-    width: 3vw;
-    height: 4vh;
+    width: 10vw;
     cursor: pointer;
     border: none;
     background: transparent;
     :hover{
         transform: scale(1.1);
     }
-    @media (min-device-width: 375px) 
-    and (max-device-width: 667px) { 
-        position: relative;
-        bottom: 4px;
-    }
+   
 `
