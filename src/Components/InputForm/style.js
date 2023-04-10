@@ -1,8 +1,9 @@
 import styled from "styled-components";
 export const FormContainer = styled.form`
     width: 50%;
-    height: 20vh;
+    height: 60vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #9E4784;
@@ -36,11 +37,22 @@ export const InputTask = styled.input`
         height: 6vh;
     }
 `
-export const InputTaskMax = styled.input`
-    width: 15vw;
-    height: 4vh;
-    border-radius: 5px;
-    font-size: 1rem;
+export const DateTimeContainer = styled.section`
+    width: 90%;
+    display: flex;
+    justify-content: center;
+`
+export const InputContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+`
+export const inputLabel = styled.label`
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    margin: .5rem 0;
+    color: #f2f2fe;
+
 `
 export const ButtonAdd = styled.button`
     width: 10vw;

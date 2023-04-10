@@ -6,6 +6,10 @@ import * as S from './style'  //importando tudo o que for estilo do documento e 
 /* Component responsaǘel pelo formulário, manipulação do input e função de adicionar novas tarefas */
 export default function FormComponent(){
     const [taskTitle, setTaskTitle] = useState() //guarda o que foi digitado no input 
+    const [taskDesc, setTaskDesc] = useState()
+    const [taskDate, setTaskDate] = useState()
+    const [taskTime, setTaskTime] = useState()
+    const [taskLocal, setTaskLocal] = useState()
     const {taskList, setTaskList} = useContext(Context) //states passados via contexto
     /* função responsável por aidicionar as tarefas a lista de tarefas,
     esse função tem fuma condicional que não permite enviar uma tarefa vazia
@@ -24,11 +28,40 @@ export default function FormComponent(){
     }
     return(
         <S.FormContainer onSubmit={(e)=>{e.preventDefault()}}> {/* Permite que a tarefa seja adicionada com o botão entender, ao mesmo tempo que impede ela  */}
-            <S.InputTask 
-                value={taskTitle} //define um valor inicial ao input, que nesse caso, é vazio, permitindo voltar a esse estado quando a tarefa for adicionada
-                onChange={e=>setTaskTitle(e.target.value)} /* adiciona o valor do input ao state data */
-                placeholder="Adicione aqui sua tarefa"
-            />
+            <S.InputContainer>
+                <S.inputLabel>Tarefa</S.inputLabel>
+                <S.InputTask 
+                    value={taskTitle} //define um valor inicial ao input, que nesse caso, é vazio, permitindo voltar a esse estado quando a tarefa for adicionada
+                    onChange={e=>setTaskTitle(e.target.value)} /* adiciona o valor do input ao state data */
+                    placeholder="Dê um nome a sua tarefa"
+                />
+            </S.InputContainer>
+            <S.InputContainer>
+                <S.inputLabel>Descrição da tarefa</S.inputLabel>
+                <S.InputTask 
+                    value={taskDesc}
+                    onChange={e => setTaskDesc(e.target.value)}
+                    placeholder="Descreva aqui sua tarefa"
+                />
+            </S.InputContainer>
+            <S.DateTimeContainer>
+                <S.InputContainer>
+                    <S.inputLabel>Data</S.inputLabel>
+                    <S.InputTask type="date" value={taskDate} />
+                </S.InputContainer>
+                <S.InputContainer>
+                    <S.inputLabel>Horário</S.inputLabel>
+                    <S.InputTask type="time" value={taskTime} style={{width: '60%'}}/>
+                </S.InputContainer>               
+            </S.DateTimeContainer>
+            <S.InputContainer>
+                <S.inputLabel>Local</S.inputLabel>
+                <S.InputTask 
+                    value={taskLocal}
+                    onChange={e => setTaskLocal(e.target.value)}
+                    placeholder="Descreva aqui sua tarefa"
+                />
+            </S.InputContainer>
             <S.ButtonAdd onClick={()=>{
                 addTask()
             }}> 
