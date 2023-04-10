@@ -19,13 +19,16 @@ export const InputTask = styled.input`
     font-size: 1rem;
     text-align: center;
     border: none;
-    :focus{
+    @media (min-width: 800px){
+        :focus{
         width: 20vw;
         transition: ease-in 0.4s;
     }
     :placeholder-shown{
         text-align: center;
     }
+    }
+    
     @media (min-device-width: 375px) 
         and (max-device-width: 667px) { 
         width: 80%;

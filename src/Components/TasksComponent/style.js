@@ -10,14 +10,22 @@ export const TasksContainer = styled.section`
     grid-column-gap: 2.1rem;
     grid-row-gap: .5rem;
     margin: 0 auto;
+    @media (min-device-width: 375px) 
+        and (max-device-width: 667px) { 
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
 `
 export const TaskItem = styled.p`
-    max-width: 70%;
+    width: 70%;
     height: 80%;
     padding: 1rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
+    line-break: strict;
 `
 export const TaskCard = styled.div`
     display: flex;
@@ -26,6 +34,11 @@ export const TaskCard = styled.div`
     flex-direction: column;
     background-color: aliceblue;
     margin-top:1rem;
+    @media (min-device-width: 375px) 
+        and (max-device-width: 667px) { 
+        width: 100%;
+        line-break: strict;
+    }
 `
 export const ButtonsContainer = styled.div`
     display: flex;

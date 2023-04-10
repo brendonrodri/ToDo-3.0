@@ -32,7 +32,7 @@ export default function FormComponent(){
             <S.ButtonAdd onClick={()=>{
                 addTask()
             }}> 
-                <IconContext.Provider value={{size: '1.6rem'}}> {/* provedor o icone, passa as propriedades que alteram o estilo */}
+                <IconContext.Provider value={{size: '2rem', color: '#f3f3f3'}}> {/* provedor o icone, passa as propriedades que alteram o estilo */}
                     <MdPostAdd />
                 </IconContext.Provider>
             </S.ButtonAdd>
