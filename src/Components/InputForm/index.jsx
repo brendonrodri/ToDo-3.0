@@ -47,11 +47,16 @@ export default function FormComponent(){
             <S.DateTimeContainer>
                 <S.InputContainer>
                     <S.inputLabel>Data</S.inputLabel>
-                    <S.InputTask type="date" value={taskDate} />
+                    <S.InputTask type="date" value={taskDate} onChange={e=>setTaskDate(e.target.value)}   />
                 </S.InputContainer>
                 <S.InputContainer>
                     <S.inputLabel>Horário</S.inputLabel>
-                    <S.InputTask type="time" value={taskTime} style={{width: '60%'}}/>
+                    <S.InputTask 
+                        type="time" 
+                        value={taskTime}
+                        onChange={e=>setTaskTime(e.target.value)} 
+                        style={{width: '60%'}}
+                    />
                 </S.InputContainer>               
             </S.DateTimeContainer>
             <S.InputContainer>
