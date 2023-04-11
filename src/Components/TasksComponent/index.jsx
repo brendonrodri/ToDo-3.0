@@ -25,7 +25,17 @@ const ListCards = () =>{
         <>
             {taskList.map((item)=>(
                 <S.TaskCard>
-                    <S.TaskItem>{item.task}</S.TaskItem>
+                    <S.TaskItem>
+                        {item.title}
+                        <ul>
+                            <li>{item.description}</li>
+                            <li>{item.date}</li>
+                            <li>{item.time}</li>
+                            <li>{item.local}</li>
+
+                        </ul>
+                    </S.TaskItem>
+                    
                     <S.ButtonsContainer>
                         <S.CardButton onClick={()=>{ delTask(item.id)}}> 
                             <IconContext.Provider value={{size: "2rem"}}>

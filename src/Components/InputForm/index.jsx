@@ -21,15 +21,20 @@ export default function FormComponent(){
         }
         setTaskList(taskList.concat({
             id: Math.random(),
-            task: taskTitle,
+            title: taskTitle,
+            description: taskDesc,
+            date: taskDate,
+            time: taskTime,
+            local: taskLocal,
             done: false
         }))
         setTaskTitle("")
+        console.log(taskList)
     }
     return(
         <S.FormContainer onSubmit={(e)=>{e.preventDefault()}}> {/* Permite que a tarefa seja adicionada com o botão entender, ao mesmo tempo que impede ela  */}
             <S.InputContainer>
-                <S.inputLabel>Tarefa</S.inputLabel>
+                <S.inputLabel>Tarefa{taskTitle}</S.inputLabel>
                 <S.InputTask 
                     value={taskTitle} //define um valor inicial ao input, que nesse caso, é vazio, permitindo voltar a esse estado quando a tarefa for adicionada
                     onChange={e=>setTaskTitle(e.target.value)} /* adiciona o valor do input ao state data */
@@ -37,7 +42,7 @@ export default function FormComponent(){
                 />
             </S.InputContainer>
             <S.InputContainer>
-                <S.inputLabel>Descrição da tarefa</S.inputLabel>
+                <S.inputLabel>Descrição da tarefa{taskDesc}</S.inputLabel>
                 <S.InputTask 
                     value={taskDesc}
                     onChange={e => setTaskDesc(e.target.value)}
@@ -46,11 +51,11 @@ export default function FormComponent(){
             </S.InputContainer>
             <S.DateTimeContainer>
                 <S.InputContainer>
-                    <S.inputLabel>Data</S.inputLabel>
+                    <S.inputLabel>Data {taskDate}</S.inputLabel>
                     <S.InputTask type="date" value={taskDate} onChange={e=>setTaskDate(e.target.value)}   />
                 </S.InputContainer>
                 <S.InputContainer>
-                    <S.inputLabel>Horário</S.inputLabel>
+                    <S.inputLabel>Horário {taskTime}</S.inputLabel>
                     <S.InputTask 
                         type="time" 
                         value={taskTime}
@@ -60,7 +65,7 @@ export default function FormComponent(){
                 </S.InputContainer>               
             </S.DateTimeContainer>
             <S.InputContainer>
-                <S.inputLabel>Local</S.inputLabel>
+                <S.inputLabel>Local {taskLocal}</S.inputLabel>
                 <S.InputTask 
                     value={taskLocal}
                     onChange={e => setTaskLocal(e.target.value)}
