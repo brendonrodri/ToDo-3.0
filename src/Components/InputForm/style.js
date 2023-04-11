@@ -8,6 +8,7 @@ export const FormContainer = styled.form`
     justify-content: center;
     background-color: #9E4784;
     margin: 0 auto;
+    border-radius: 10px;
     @media (min-device-width: 375px) 
         and (max-device-width: 667px) { 
         width: 95%;

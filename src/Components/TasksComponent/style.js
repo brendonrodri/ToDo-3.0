@@ -34,6 +34,7 @@ export const TaskCard = styled.div`
     flex-direction: column;
     background-color: aliceblue;
     margin-top:1rem;
+    border-radius: 5px;
     @media (min-device-width: 375px) 
         and (max-device-width: 667px) { 
         width: 100%;

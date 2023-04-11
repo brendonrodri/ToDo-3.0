@@ -55,7 +55,7 @@ export default function FormComponent(){
                         type="time" 
                         value={taskTime}
                         onChange={e=>setTaskTime(e.target.value)} 
-                        style={{width: '60%'}}
+                        style={{width: '70%'}}
                     />
                 </S.InputContainer>               
             </S.DateTimeContainer>

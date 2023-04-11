@@ -8,6 +8,7 @@ export const Header = styled.header`
     justify-content: center;
     align-items: center;
     background-color: #9E4784;
+    border-radius: 10px;
     @media (min-device-width: 375px) 
     and (max-device-width: 667px){
         width: 95%;
