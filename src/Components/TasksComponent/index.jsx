@@ -25,17 +25,12 @@ const ListCards = () =>{
         <>
             {taskList.map((item)=>(
                 <S.TaskCard>
-                    <S.TaskItem>
-                        {item.title}
-                        <ul>
-                            <li>{item.description}</li>
-                            <li>{item.date}</li>
-                            <li>{item.time}</li>
-                            <li>{item.local}</li>
-
-                        </ul>
-                    </S.TaskItem>
-                    
+                    <S.TaskTitle>{item.title}</S.TaskTitle>
+                    <S.TaskDescription>{item.description}</S.TaskDescription>
+                    <S.TasksDateContainer>
+                        <S.DateTime>Dia: {item.date}, hora: {item.time}</S.DateTime>
+                        <S.Local>{item.local}</S.Local>
+                    </S.TasksDateContainer>   
                     <S.ButtonsContainer>
                         <S.CardButton onClick={()=>{ delTask(item.id)}}> 
                             <IconContext.Provider value={{size: "2rem"}}>
